@@ -9,6 +9,5 @@ e = b[2]
 
 println("a is $a e is $e")
 
-
 x_new = transpose(reshape(x,a,e))
 println(x_new)
