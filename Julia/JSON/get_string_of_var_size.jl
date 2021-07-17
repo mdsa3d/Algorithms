@@ -1,4 +1,4 @@
-using DataFrames
+using DataFrames, BenchmarkTools
 
 #create a dataframe
 df = DataFrame()
@@ -15,15 +15,14 @@ function get_string_size(var)
 end 
 
 # vector
-test_vec = [1,2,3,4,5,65,6]
+test_vec = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
 println("the size of the vector is $(size(test_vec))")
 
 #array (matrix)
-test_array = [1 2; 3 4; 5 65; 6 1; 2 3; 4 5; 65 6]
+test_array = Array(df)
 println("the size of the test array is $(size(test_array))")
 
 # testing
-
 size_df_string = get_string_size(df)
 size_vec_string = get_string_size(test_vec)
 size_array_string = get_string_size(test_array)
