@@ -1,3 +1,8 @@
+#= The idea is to create a system which checks for a folder on desktop
+    if it is not available then creates a new one.
+    Following which the files are saved in new sub-directories 
+=#
+
 using Serialization # Serialize package to convert an object to serial type
 
 #create directory
