@@ -54,6 +54,8 @@ display(s)
 display(uf)
 display(u)
 display(u_cu)
+
+
 #= Python version
 # df.dtypes is returning data-type for each column
 data = [{'a': 1, 'b': 2, 'c':3},
