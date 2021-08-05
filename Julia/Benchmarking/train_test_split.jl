@@ -1,8 +1,9 @@
-using CSV, DataFrames, Random
+using DataFrames, Random, BenchmarkTools
 
-file = download("https://raw.githubusercontent.com/izzatdarani/placeholder/master/dataset/basic.csv")
-data = CSV.read(file, DataFrame)
+data = DataFrame(:a=>rand(20), :b=>rand(20), :c=>rand(20))
 
+# pct ==> how much percentage you would like to give to training section, 0.7 = 70%
+# shuffle ==> for allowing shuffling in the dataset, default is false.
 function train_test_split(df; pct=0.7, shuffle=false)
     @assert 0 <= pct <= 1
     if (shuffle==false)
@@ -20,6 +21,6 @@ function train_test_split(df; pct=0.7, shuffle=false)
     return x_train, x_test, y_train, y_test
 end
 
-a,b,c,d = train_test_split(data)
-
-println("\n $a, $b, $c, $d")
+u = @benchmark a,b,c,d = train_test_split(data)
+display(u)
+#println("\n $a, $b, $c, $d")
