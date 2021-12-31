@@ -1,3 +1,4 @@
 ![GitHub](https://img.shields.io/github/license/mdsa3d/Algorithms)
-# Python-Julia
-Syntax and operations translated for Python functions to Julia. 
+# Algorithms
+This repository contains algorithms for python and julia programming language. 
+Some syntax and operations for Python functions are translated to Julia. 
