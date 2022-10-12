@@ -1,3 +1,5 @@
+# find the min of sum of consecutive negtive values
+# for each column in a given dataframe
 import pandas as pd
 df = pd.read_csv('Book2.csv')
 df = df.dropna()
@@ -21,7 +23,7 @@ for col, row in df.iteritems():
             main.append(sumOfList(temp, len(temp)))
             temp=[]
     a.append(main)
-    
+
 min_a = []
 for i in a:
     min_a.append(min(i))
